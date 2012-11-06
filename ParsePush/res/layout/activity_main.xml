@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Log in or Sign up"
+        tools:context=".MainActivity" />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:layout_alignParentTop="true"
+        
+        android:layout_marginTop="30dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtPass"
+       android:layout_width="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:layout_below="@+id/edtUser"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edtMail"
+        android:layout_width="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:layout_below="@+id/edtPass"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtMail"
+        android:layout_below="@+id/edtMail"
+        
+        android:onClick="btnSignUp_onClick"
+        android:text="Sign up" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:onClick="btnLogin_onClick"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMail"
+        
+        android:layout_toRightOf="@+id/btnSignUp"
+        android:text="Log in" />
+
+    <Button
+        android:id="@+id/btnPush"
+        android:onClick="btnPush_onClick"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtMsg"
+        android:layout_marginBottom="24dp"
+        android:text="Push" />
+
+</RelativeLayout>
